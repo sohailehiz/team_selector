@@ -10,7 +10,9 @@ def intersection(lst1, lst2):
 def change_player_numbers():
     st.session_state["random_nos"] = random.sample(range(len_of_refined_list),len_of_refined_list)
     return
-
+colstitle1,colstitle2,colstitle3 = st.columns(3)
+colstitle2.title("PMP v1.0")
+colstitle2.text("Pick My Players")
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
