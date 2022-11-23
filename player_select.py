@@ -100,6 +100,7 @@ if get_players_names != "":
                         col1.table(team1)
                         team2 = pd.DataFrame(get_selected_player_2_team.items(), columns=['Players #', 'Players Names'])
                         col2.table(team2)
+                        st.balloons()
                     else:
                         col2show.text("")
             except:
