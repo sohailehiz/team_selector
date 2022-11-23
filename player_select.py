@@ -38,11 +38,11 @@ if get_players_names != "":
     if len(get_players_names_refined) >= 10:
         len_of_refined_list = len(get_players_names_refined)
         if int(len(get_players_names_refined)/2) <= 7:
-            game = st.selectbox('Football Type',['7 v 7','6 v 6','5 v 5'])
+            game = st.selectbox('Game Type',['7 v 7','6 v 6','5 v 5'])
         elif int(len(get_players_names_refined)/2) <= 6:
-            game = st.selectbox('Football Type',['6 v 6','5 v 5'])
+            game = st.selectbox('Game Type',['6 v 6','5 v 5'])
         else:
-            game = st.selectbox('Football Type',['5 v 5'])
+            game = st.selectbox('Game Type',['5 v 5'])
 
         if game == '7 v 7':
             game_no = 7
@@ -53,7 +53,7 @@ if get_players_names != "":
             
         col1button, col2button, col3button = st.columns(3)
         if game_no*2 > len(get_players_names_refined):
-            col2button.write("Select a different Football Type Players are Less")
+            col2button.write("Select a different Game Type, Players are Less")
         else:
             ## button to generate a new random player_numbers
             col2button.button("Generate Team Captain and Player Numbers", on_click=change_player_numbers)
@@ -109,5 +109,5 @@ colstep1, colstep2, colstep3 = st.columns(3)
 colstep1.text("Copy Final List\nFrom WhatsApp Group and\npaste in the text area, as shown below: \nSunday 6-8pm \nPlace - Turfside - booked\n1. player I \n2. player II \n3. player III \n4. player IV \n5. player V \n6. player VI \n7. player VII \n8. player VIII \n9. player IX \n10. player X \n11. player XI \n12. player XII \n13. player XIII \n14. player XIV +I \n15. player XV \n\nWaitlist \n1. player M")
 colstep3.text("Delete\nDate, Waitlist Location Just Keep\nthe Main Players, as shown below: \n1. player I \n2. player II \n3. player III \n4. player IV \n5. player V \n6. player VI \n7. player VII \n8. player VIII \n9. player IX \n10. player X \n11. player XI \n12. player XII \n13. player XIII \n14. player XIV +I \n15. player XV")
 st.text("Click on Button to Generate Captain and Player Numbers")
-st.text("Team Captain 1 can pick his/her Players based on the football Type")
+st.text("Team Captain 1 can pick his/her Players based on the Game Type")
 st.text("Team Captain 2 Can ONLY pick his/her Players\nafter Team Captain 1 [Option will be available then]")
