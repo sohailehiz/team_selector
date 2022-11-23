@@ -67,7 +67,7 @@ if get_players_names != "":
                 generate_player_number_random = {}
                 for idx,player_name in enumerate(get_players_names_refined):
                     generate_player_number_random[random_nos[idx]] = player_name
-                remove_list = [1,2]
+                remove_list = [0,1]
 
                 get_players_key = [i for i in list(generate_player_number_random.keys()) if i not in remove_list]#list(generate_player_number_random.keys())
 
@@ -75,16 +75,16 @@ if get_players_names != "":
                 p2 = []
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.subheader("Team 1 Captain : "+generate_player_number_random[1])
-                    p1 = st.multiselect(generate_player_number_random[1]+" Pick "+str(game_no-1)+" Player #'s",get_players_key, key = "p1")
+                    st.subheader("Team 1 Captain : "+generate_player_number_random[0])
+                    p1 = st.multiselect(generate_player_number_random[0]+" Pick "+str(game_no-1)+" Player #'s",get_players_key, key = "p1")
                     #st.write('You selected:', p1)
 
                 with col2:
-                    st.subheader("Team 2 Captain : "+generate_player_number_random[2])
+                    st.subheader("Team 2 Captain : "+generate_player_number_random[1])
                     if len(p1) == game_no-1:
-                        p2 = st.multiselect(generate_player_number_random[2]+" Pick "+str(game_no-1)+" Player #'s",intersection(get_players_key,p1), key = "p2")
+                        p2 = st.multiselect(generate_player_number_random[1]+" Pick "+str(game_no-1)+" Player #'s",intersection(get_players_key,p1), key = "p2")
                     else:
-                        p2 = st.multiselect(generate_player_number_random[2]+" Pick "+str(game_no-1)+" Player #'s",[], key = "p2")
+                        p2 = st.multiselect(generate_player_number_random[1]+" Pick "+str(game_no-1)+" Player #'s",[], key = "p2")
                         #st.write('You selected:', p2)
                 get_selected_player_1_team = {}
                 get_selected_player_2_team = {}
