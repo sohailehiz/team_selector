@@ -57,7 +57,7 @@ if get_players_names != "":
             col2button.write("Select a different\n\nGame Type,\nPlayers are Less")
         else:
             ## button to generate a new random player_numbers
-            col2button.button("Generate Team Captain and Player Numbers", on_click=change_player_numbers)
+            col2button.button("Generate Team Captain Names and Player Nos", on_click=change_player_numbers)
             # initializing with a random number
             #if "random_nos" not in st.session_state:
                 #st.session_state["random_nos"] = []#random.sample(range(len_of_refined_list),len_of_refined_list)
@@ -102,7 +102,7 @@ if get_players_names != "":
                     else:
                         col2show.text("")
             except:
-                st.write("Click On Generating Team Captain and Players #s")
+                st.write("Click On Generating Team Captain Names and Players Nos")
     else:
         st.write("Please Enter @ Least 8 Players")
 with st.expander("How to Use the App"):
