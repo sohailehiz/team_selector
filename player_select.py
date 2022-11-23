@@ -105,10 +105,10 @@ if get_players_names != "":
                 st.write("Click On Generating Team Captain and Players #s")
     else:
         st.write("Please Enter @ Least 10 Players")
-st.text("\n\n\n\n How to Use the App")
-colstep1, colstep2, colstep3 = st.columns(3)
-colstep1.text("Copy Final List\nFrom WhatsApp Group and\npaste in the text area, as shown\nbelow: \nSunday 6-8pm \nPlace - Turfside - booked\n\n1. player I \n2. player II \n3. player III \n4. player IV \n5. player V \n6. player VI \n7. player VII \n8. player VIII \n9. player IX \n10. player X \n11. player XI \n12. player XII \n13. player XIII \n14. player XIV +I \n15. player XV \n\nWaitlist \n1. player M")
-colstep3.text("Delete\nDate, Waitlist Location,\nJust Keep\nthe Main Players, as shown\nbelow: \n\n1. player I \n2. player II \n3. player III \n4. player IV \n5. player V \n6. player VI \n7. player VII \n8. player VIII \n9. player IX \n10. player X \n11. player XI \n12. player XII \n13. player XIII \n14. player XIV +I \n15. player XV")
-st.text("Click on Button to Generate Captain and Player Numbers")
-st.text("Team Captain 1 can pick his/her Players based on the Game Type")
-st.text("Team Captain 2 Can ONLY pick his/her Players\nafter Team Captain 1 [Option will be available then]")
+with st.expander("How to Use the App"):
+    colstep1, colstep2, colstep3 = st.columns(3)
+    colstep1.text("Copy Final List\nFrom WhatsApp Group and\npaste in the text area, as shown\nbelow: \nSunday 6-8pm \nPlace - Turfside - booked\n\n1. player I \n2. player II \n3. player III \n4. player IV \n5. player V \n6. player VI \n7. player VII \n8. player VIII \n9. player IX \n10. player X \n11. player XI \n12. player XII \n13. player XIII \n14. player XIV +I \n15. player XV \n\nWaitlist \n1. player M")
+    colstep3.text("Delete\nDate, Waitlist Location,\nJust Keep\nthe Main Players, as shown\nbelow: \n\n1. player I \n2. player II \n3. player III \n4. player IV \n5. player V \n6. player VI \n7. player VII \n8. player VIII \n9. player IX \n10. player X \n11. player XI \n12. player XII \n13. player XIII \n14. player XIV +I \n15. player XV")
+    st.text("Click on Button to Generate Captain and Player Numbers")
+    st.text("Team Captain 1 can pick his/her Players based on the Game Type")
+    st.text("Team Captain 2 Can ONLY pick his/her Players\nafter Team Captain 1 [Option will be available then]")
